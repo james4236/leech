@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: leechbot
+    env: docker
+    repo: https://github.com/james4236/leech
+    branch: main
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: CONFIG_ENV
+        value: config.env
+      - key: CREDENTIALS_JSON
+        value: credentials.json
+      - key: TOKEN_PICKLE
+        value: token.pickle
+      - key: TOKEN_SA_PICKLE
+        value: token_sa.pickle
